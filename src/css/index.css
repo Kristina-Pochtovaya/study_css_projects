@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.animation {
+  background-color: rgb(149, 177, 238);
+  padding: 10px 0;
+  height: inherit;
+}
+
+.contaner {
+  max-width: 1170px;
+  padding: 0 10px;
+  height: inherit;
+  margin: auto;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: inherit;
+}
+
+.trunk {
+  height: 500px;
+  width: 10px;
+  position: relative;
+  background-image: linear-gradient(to top, #997558, #a77e5d);
+  border-radius: 10px;
+}
+
+.brunch {
+  position: absolute;
+  width: 5px;
+  background-image: linear-gradient(to top, #997558, #a77e5d);
+  border-radius: 10px;
+  height: 50px;
+  top: 50px;
+  left: 0;
+}
+
+.brunch:nth-child(2),
+.brunch:nth-child(3) {
+  height: 150px;
+  top: 50px;
+}
+
+.brunch:nth-child(4),
+.brunch:nth-child(5) {
+  height: 170px;
+  top: 150px;
+}
+
+.brunch:nth-child(6),
+.brunch:nth-child(7) {
+  height: 200px;
+  top: 200px;
+}
+
+.brunch:nth-child(8) {
+  height: 250px;
+  top: 230px;
+}
+
+.brunch:nth-child(odd) {
+  transform-origin: bottom center;
+}
+
+.brunch:nth-child(even) {
+  transform-origin: bottom center;
+}
+
+.leaf {
+  width: 25px;
+  height: 15px;
+  background-image: linear-gradient(to right, #346400, #5ad23c);
+  border-radius: 75% 0 75% 0;
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  transform-origin: left top;
+  animation-name: leaf-20;
+}
+
+.brunch--second .leaf {
+  right: 100%;
+  bottom: 75%;
+  animation-name: leaf-80;
+  left: unset;
+  transform-origin: right top;
+}
+
+.brunch--second .leaf:nth-child(2) {
+  bottom: 50%;
+  animation-name: leaf-170;
+  right: 0;
+}
+
+.brunch--second .leaf:nth-child(3),
+.brunch--third .leaf:nth-child(3) {
+  bottom: 20%;
+}
+
+.brunch--third .leaf:nth-child(1) {
+  bottom: 75%;
+}
+
+.brunch--third .leaf:nth-child(2) {
+  bottom: 55%;
+  animation-name: leaf-230;
+  left: 100%;
+  transform-origin: left bottom;
+}
+
+.brunch--fourth .leaf,
+.brunch--sixth .leaf,
+.brunch--eighth .leaf {
+  left: unset;
+  transform-origin: right top;
+}
+
+.brunch--fourth .leaf:nth-child(odd),
+.brunch--sixth .leaf:nth-child(odd),
+.brunch--eighth .leaf:nth-child(odd) {
+  right: 100%;
+  animation-name: leaf-80;
+}
+
+.brunch--fourth .leaf:nth-child(even),
+.brunch--sixth .leaf:nth-child(even),
+.brunch--eighth .leaf:nth-child(even) {
+  right: 0;
+  animation-name: leaf-170;
+}
+
+.brunch--fourth .leaf:nth-child(1) {
+  bottom: 80%;
+}
+
+.brunch--fourth .leaf:nth-child(2) {
+  bottom: 60%;
+}
+
+.brunch--fourth .leaf:nth-child(3) {
+  bottom: 50%;
+}
+
+.brunch--fourth .leaf:nth-child(4) {
+  bottom: 25%;
+}
+
+.brunch--fourth .leaf:nth-child(5),
+.brunch--fifth .leaf:nth-child(5) {
+  bottom: 15%;
+}
+
+.brunch--fifth .leaf:nth-child(1) {
+  bottom: 75%;
+}
+
+.brunch--fifth .leaf:nth-child(even),
+.brunch--seventh .leaf:nth-child(even) {
+  animation-name: leaf-230;
+  left: 100%;
+  transform-origin: left bottom;
+}
+
+.brunch--fifth .leaf:nth-child(2) {
+  bottom: 65%;
+}
+
+.brunch--fifth .leaf:nth-child(3) {
+  bottom: 45%;
+}
+
+.brunch--fifth .leaf:nth-child(4) {
+  bottom: 35%;
+}
+
+.brunch--sixth .leaf:nth-child(1),
+.brunch--seventh .leaf:nth-child(1) {
+  bottom: 80%;
+}
+
+.brunch--sixth .leaf:nth-child(2),
+.brunch--seventh .leaf:nth-child(2) {
+  bottom: 70%;
+}
+
+.brunch--sixth .leaf:nth-child(3),
+.brunch--seventh .leaf:nth-child(3) {
+  bottom: 60%;
+}
+
+.brunch--sixth .leaf:nth-child(4),
+.brunch--seventh .leaf:nth-child(4) {
+  bottom: 45%;
+}
+
+.brunch--sixth .leaf:nth-child(5),
+.brunch--seventh .leaf:nth-child(5) {
+  bottom: 30%;
+}
+
+.brunch--sixth .leaf:nth-child(6),
+.brunch--seventh .leaf:nth-child(6) {
+  bottom: 15%;
+}
+
+.brunch--eighth .leaf:nth-child(1) {
+  bottom: 85%;
+}
+
+.brunch--eighth .leaf:nth-child(2) {
+  bottom: 70%;
+}
+
+.brunch--eighth .leaf:nth-child(3) {
+  bottom: 60%;
+}
+
+.brunch--eighth .leaf:nth-child(4) {
+  bottom: 45%;
+}
+
+.brunch--eighth .leaf:nth-child(5) {
+  bottom: 30%;
+}
+
+.brunch--eighth .leaf:nth-child(6) {
+  bottom: 25%;
+}
+
+.brunch--eighth .leaf:nth-child(7) {
+  bottom: 10%;
+}
+
+.trunk,
+.brunch,
+.leaf {
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+.trunk {
+  transform-origin: bottom center;
+  animation-name: trunk;
+}
+
+.brunch {
+  animation-delay: 3s;
+}
+
+.leaf {
+  animation-delay: 6s;
+}
+
+.brunch:nth-child(odd) {
+  animation-name: branch-odd;
+}
+
+.brunch:nth-child(even) {
+  animation-name: branch-even;
+}
+
+@keyframes trunk {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes branch-odd {
+  0% {
+    transform: scale(0) rotate(-60deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(-60deg);
+  }
+}
+
+@keyframes branch-even {
+  0% {
+    transform: scale(0) rotate(60deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(60deg);
+  }
+}
+
+@keyframes leaf-20 {
+  0% {
+    transform: scale(0) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) rotate(-20deg);
+  }
+}
+
+@keyframes leaf-80 {
+  0% {
+    transform: scale(0) rotate(80deg);
+  }
+  100% {
+    transform: scale(1) rotate(80deg);
+  }
+}
+
+@keyframes leaf-170 {
+  0% {
+    transform: scale(0) rotate(-170deg);
+  }
+  100% {
+    transform: scale(1) rotate(-170deg);
+  }
+}
+
+@keyframes leaf-230 {
+  0% {
+    transform: scale(0) rotate(230deg);
+  }
+  100% {
+    transform: scale(1) rotate(230deg);
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "study-markup",
+  "version": "1.0.0",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kristina-Pochtovaya/study_css_projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kristina-Pochtovaya/study_css_projects/issues"
+  },
+  "homepage": "https://github.com/Kristina-Pochtovaya/study_css_projects#readme",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
