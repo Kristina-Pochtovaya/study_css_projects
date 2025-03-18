@@ -1,6 +1,7 @@
 /* @import 'tailwindcss'; */
 div {
   background-color: #346400;
+  font-size: 21px;
 }
 
 * {
