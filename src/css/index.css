@@ -1,5 +1,9 @@
 /* @import 'tailwindcss'; */
 
+div {
+  background-color: #346400;
+}
+
 * {
   margin: 0;
   padding: 0;
